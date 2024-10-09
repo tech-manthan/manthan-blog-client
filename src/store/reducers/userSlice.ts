@@ -22,6 +22,8 @@ const initialState: UserState = {
     total_reads: 0,
   },
   role: "",
+  _id: "",
+  joinedAt: null,
 };
 
 const userSlice = createSlice({
@@ -70,9 +72,6 @@ export const {
   updateSocialLinks,
   updateAccountInfo,
   setRole,
-  toggleGoogleAuth,
-  addBlog,
-  removeBlog,
   resetUser,
 } = userSlice.actions;
 
