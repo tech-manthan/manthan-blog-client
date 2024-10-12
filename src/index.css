@@ -120,6 +120,18 @@
   }
 }
 
+@layer utilities {
+  .clip-circle-sector-left {
+    /* clip-path: circle(62.1% at 63% 63%); */
+    clip-path: circle(100% at 100% 100%);
+  }
+
+  .clip-circle-sector-right {
+    /* clip-path: circle(62.1% at 63% 63%); */
+    clip-path: circle(100% at 0 100%);
+  }
+}
+
 .ce-block__content,
 .ce-toolbar__content {
   max-width: 900px;

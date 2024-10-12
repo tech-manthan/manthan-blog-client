@@ -28,15 +28,16 @@ const Menu = ({ children, position, items }: MenuProps) => {
         >
           {items.map((item, index) => {
             return (
-              <MenuItem
-                key={index}
-                type={item.type}
-                leftIconName={item.leftIconName}
-                rightIconName={item.rightIconName}
-                onClick={item.onClick}
-                text={item.text}
-                to={item.to}
-              />
+              <div key={index} onClick={() => setToggleMenu(false)}>
+                <MenuItem
+                  type={item.type}
+                  leftIconName={item.leftIconName}
+                  rightIconName={item.rightIconName}
+                  onClick={item.onClick}
+                  text={item.text}
+                  to={item.to}
+                />
+              </div>
             );
           })}
         </div>

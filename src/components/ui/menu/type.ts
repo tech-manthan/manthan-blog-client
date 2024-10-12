@@ -1,4 +1,4 @@
-export interface MenuItemTypes {
+export interface MenuItemType {
   text?: string;
   leftIconName?: string;
   rightIconName?: string;

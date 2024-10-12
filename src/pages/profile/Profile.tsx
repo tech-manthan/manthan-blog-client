@@ -14,12 +14,12 @@ const items: [CircleMenuItem, CircleMenuItem] = [
     iconName: "comment-alt-check",
   },
   {
-    to: "/auth/chats",
-    iconName: "meeting",
+    to: "/auth/profile/edit",
+    iconName: "user-pen",
   },
 ];
 
-const Home = () => {
+const Profile = () => {
   const user = useAppSelector(getUser);
 
   const menuItems: CircleMenuItems = useMemo<CircleMenuItems>(() => {
@@ -27,7 +27,7 @@ const Home = () => {
       return [
         ...items,
         {
-          to: "/auth/profile/followers",
+          to: "/auth/profile/follower",
           iconName: "users-alt",
         },
         {
@@ -39,11 +39,11 @@ const Home = () => {
       return [
         ...items,
         {
-          to: "auth/followings",
+          to: "auth/profile/following",
           iconName: "following",
         },
         {
-          to: "auth/become-writer",
+          to: "auth/profile/upgrade",
           iconName: "book-circle-arrow-up",
         },
       ];
@@ -56,4 +56,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Profile;

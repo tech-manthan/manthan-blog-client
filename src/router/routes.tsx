@@ -1,5 +1,15 @@
 import { RouteObject } from "react-router-dom";
-import { Editor, ForgotPassword, Home, Login, Register } from "../pages";
+import {
+  Analytics,
+  BlogsViewer,
+  Dashboard,
+  Editor,
+  ForgotPassword,
+  Home,
+  Login,
+  Profile,
+  Register,
+} from "../pages";
 import { AuthRoutes, NonAuthRoutes, Root } from "../layout";
 
 const routes: RouteObject[] = [
@@ -37,6 +47,28 @@ const routes: RouteObject[] = [
           {
             path: "editor",
             element: <Editor />,
+          },
+          {
+            path: "dashboard",
+            element: <Dashboard />,
+            children: [
+              {
+                path: "",
+                element: <Analytics />,
+              },
+              {
+                path: "blogs",
+                element: <BlogsViewer />,
+              },
+            ],
+          },
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+          {
+            path: "setting",
+            element: <Profile />,
           },
         ],
       },
